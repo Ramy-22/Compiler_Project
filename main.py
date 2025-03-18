@@ -1,8 +1,6 @@
-from identifier import is_valid_identifier
+from identifier_scanner import scan_identifiers
 
 if __name__ == '__main__':
-    user_input = input("Enter an identifier to check its validity: ")
-    if is_valid_identifier(user_input):
-        print(f"'{user_input}' is a valid identifier.")
-    else:
-        print(f"'{user_input}' is not a valid identifier")
+    input_string = input("Enter code as a string to scan for valid identifiers: ")
+    identifiers = scan_identifiers(input_string)
+    print(f"valid identifiers: {identifiers}")
